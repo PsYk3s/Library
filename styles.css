@@ -75,11 +75,18 @@ button:hover {
 
 #toggle {
     text-align: center;
-    padding: 3px 6px;
+    padding: 3px 7px;
     border-radius: 20px;
     margin: auto;
     font-size: 15px;
     color: #f1f1f1;
     font-weight: bold;
-    background: #d1d1d1;
+}
+
+button.true {
+    background: #74db6d;
+}
+
+button.false {
+    background: #b35252;
 }

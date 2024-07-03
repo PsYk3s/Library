@@ -25,7 +25,7 @@ function addBookToLibrary() {
 }
 
 function update() {
-    bookshelf.innerHTML = myLibrary.map((_, index) => `<div class="book" id="${index}">${myLibrary[index].title} by ${myLibrary[index].author}, ${myLibrary[index].pages} pages, ${myLibrary[index].read ? "has been read." : "has not been read."}</div><button id="toggle" onclick="toggleRead(${index})"> + </button><button id="remove" onclick="removeBook(${index})"> X </button>`).join('')
+    bookshelf.innerHTML = myLibrary.map((_, index) => `<div class="book" id="${index}">${myLibrary[index].title} by ${myLibrary[index].author}, ${myLibrary[index].pages} pages, ${myLibrary[index].read ? "has been read." : "has not been read."}</div><button id="toggle" class="${myLibrary[index].read}" onclick="toggleRead(${index})"> + </button><button id="remove" onclick="removeBook(${index})"> X </button>`).join('')
 }
 
 function removeBook(index) {
