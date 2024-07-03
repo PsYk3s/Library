@@ -1,0 +1,85 @@
+#container {
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 0.5em;
+}
+
+body {
+    background: #333;
+    font-family: monospace;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+label {
+    width: 100%;
+    margin-top: 10px;
+}
+
+input[type="text"], select {
+    padding: 7px;
+    margin-top: 4px;
+}
+
+input[type="text"], select {
+    padding: 7px;
+    margin-top: 4px;
+    width: -webkit-fill-available;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #444444;
+    border: none;
+    color: #ffffff;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #666666;
+}
+
+.book {
+    padding: 12px;
+    border: 2px solid #33b4ff;
+    background: #e0fffe;
+    width: -webkit-fill-available;
+}
+
+#bookshelf {
+    display: inline-grid;
+    grid-template: 1fr / 1fr 25px 25px;
+    width: 100%;
+    align-items: center;
+    gap: 4px;
+}
+
+#remove {
+    text-align: center;
+    padding: 3px 6px;
+    border-radius: 20px;
+    margin: auto;
+    font-size: 15px;
+    color: #f1f1f1;
+    font-weight: bold;
+    background: #d1d1d1;
+}
+
+#toggle {
+    text-align: center;
+    padding: 3px 6px;
+    border-radius: 20px;
+    margin: auto;
+    font-size: 15px;
+    color: #f1f1f1;
+    font-weight: bold;
+    background: #d1d1d1;
+}
