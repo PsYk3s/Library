@@ -1,27 +1,20 @@
-const submit = document.getElementById("submit").addEventListener("click", addBookToLibrary)
+const submit = document.getElementById("submit")
 const bookshelf = document.getElementById("bookshelf")
+const title = document.getElementById("title");
+const author = document.getElementById("author");
+const pages = document.getElementById("pages");
+const read = document.getElementById("read");
 
 const myLibrary = []
 
 //constructor function to compile new object and push to library
-function Books(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
-
-//retrieve input and use the 'Books' object constructor to create a new book on the shelf.
-function addBookToLibrary() {
-    const title = document.getElementById("title").value;
-    const author = document.getElementById("author").value;
-    const pages = document.getElementById("pages").value;
-    const read = document.getElementById("read").value == "read";
-    if (title && author && pages) {
-        const newBook = new Books(title, author, pages, read)
-        myLibrary.push(newBook)
+class Books {
+    constructor(title, author, pages, read) {
+        this.title = title
+        this.author = author
+        this.pages = pages
+        this.read = read
     }
-    update()
 }
 
 function update() {
@@ -34,8 +27,14 @@ function removeBook(index) {
 }
 
 function toggleRead(index) {
-    myLibrary[index].read ? myLibrary[index].read = false : myLibrary[index].read = true;
+    myLibrary[index].read.value == "read" ? myLibrary[index].read = false : myLibrary[index].read = true;
     update()
 }
 
-
+submit.addEventListener("click", () => {
+    if (title.value && author.value && pages.value) {
+        const newBook = new Books(title.value, author.value, pages.value, read.value == "read")
+        myLibrary.push(newBook)
+        update()
+    }
+})
